@@ -24,3 +24,15 @@ test.afterEach(async ({page}, testInfo) => {
     }
 //clean up database
 });
+
+test.describe(() => {
+    test.skip("Test One", async ({page}) => {
+
+    })
+    test.only("Test Two", async ({page}) => {
+
+    })
+    test("Test Three", async ({page}) => {
+
+    })
+})

@@ -1,0 +1,28 @@
+{
+  "name": "palywrightproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e": "npx playwright test tests/",
+    "test:e2e:ui": "npx playwright test tests/ --headed",
+    "test:e2e:destop": "npx playwright test tests/ --ui",
+    "test:e2e:desk-tag": "npx playwright test tests/ --grep @test --project=chromium",
+    "test:e2e:all": "npx playwright test tests/ --project=all-browsers-and-tests",
+    "test:e2e:ci": "CI=1 npx playwright tests/ --project=ci --shard=$CI_NODE_INDEX/$CI_NODE_TOTAL",
+    "test:e2e:dev": "npx playwright test tests/ --project=chromium --headed --retries=0 --reporter=line",
+    "test:e2e:smoke": "npx playwright test tests/ --grep @smoke --project=chromium",
+    "test:e2e:non-smoke": "npx playwright test tests/ --grep-invert @smoke --project=firefox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "typescript": "^5.3.3"
+  }
+}

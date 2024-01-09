@@ -3,8 +3,6 @@ import LoginPage from "../pages/login.page";
 import pages from "../../utils/pages";
 import user from "../../utils/user";
 
-require('dotenv').config({override: true});
-
 const username = process.env.USERNAME;
 const password = process.env.PASSWORD;
 let loginPage: LoginPage;

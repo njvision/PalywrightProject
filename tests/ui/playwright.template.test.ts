@@ -1,6 +1,6 @@
 import {test, expect, type Page} from "@playwright/test";
-import {HomePage} from "../pages/home.page";
-import {TopMenuPage} from "../pages/top.menu.page";
+import HomePage from "../pages/home.page";
+import TopMenuPage from "../pages/top.menu.page";
 
 const url = 'https://playwright.dev/';
 let homePage: HomePage;
@@ -16,7 +16,7 @@ async function clickGetStarted(page: Page) {
     topMenuPage = new TopMenuPage(page);
 }
 
-test.describe.only('Tests Set', () => {
+test.describe('Tests Set', () => {
     test('Check displayed text', async ({page}) => {
         await test.step("When", async () => {
             await clickGetStarted(page);

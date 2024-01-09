@@ -1,6 +1,7 @@
 import {test, expect} from "@playwright/test";
 
-test('@test - check displayed text', async ({page}) => {
+test('' +
+    'check displayed text', async ({page}) => {
     // Given
     await page.goto('https://playwright.dev/');
     const text = 'Playwright is distributed as a set of Maven modules.';
